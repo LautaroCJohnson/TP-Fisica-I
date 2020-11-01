@@ -3,7 +3,7 @@
 \usepackage{amsmath} 
 
 \title{Trabajo practico computacional} 
-\author{Franco, Lautaro, Nicol\'as, Tomas}
+\author{Franco Matías Carpino Mansi \and Lautaro Cesar Johnson \and Nicol\'as Monz\'on \and Tomas Landolfi}
 \date{\today}
 
 \usepackage{graphicx}
@@ -15,7 +15,9 @@
     
     \section{DCL}
     
+    \begin{center}
     \includegraphics[scale=0.3]{DCL.png}
+	\end{center}    
     
     \section{Ecuaciones de Newton}
     
@@ -120,13 +122,15 @@
 	Coincidiendo con lo pedido, determinando $\theta = 0$ como estable, debido a que $\frac{g}{R} < \frac{k}{m}$
 
 	Luego al comparar con la aproximaci\'on num\'erica graficada con Python, obtuvimos que las ra\'ices (marcadas con puntos) coinciden, con un error despreciable de la soluci\'on anal\'itica.
-		
-	\includegraphics[scale=0.5]{01.png}
-	\includegraphics[scale=0.5]{02.png}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{01.png}
+		\includegraphics[scale=0.5]{02.png}
+	\end{center}
 
 	\section{Pequeñas oscilaciones vs. soluci\'on num\'erica}
 	
-	Para buscar la soluci\'on anal\'itica utilizaremos pqueñas oscilaciones. Para ello, desarrollamos el polinomio de Taylor de orden 1 de $f(\theta)$ en un entorno a $\theta_{\textbf{eq}} = 0$.
+	Para buscar la soluci\'on anal\'itica utilizaremos pequeñas oscilaciones. Para ello, desarrollamos el polinomio de Taylor de orden 1 de $f(\theta)$ en un entorno a $\theta_{\textbf{eq}} = 0$.
 	
 	$$
 		f(\theta) \simeq f(\theta_{\textbf{eq}}) + f'((\theta_{\textbf{eq}}))(\theta - \theta_{\textbf{eq}})
@@ -172,15 +176,18 @@
 		
 		Para $\dot{\theta}_i = 10 \frac{\textbf{rad}}{\textbf{s}}$ notamos un gr\'afico diferente a los que ven\'iamos teniendo. Nos encontramos ante una situaci\'on en la cual la velocidad inicial es tan alta que deja de haber oscilaci\'on, dado que la masa \emph{sale} del punto de equilibrio.
 		
-		\includegraphics[scale=0.5]{03.png}
-		\includegraphics[scale=0.5]{04.png}
-		\includegraphics[scale=0.5]{05.png}
-		\includegraphics[scale=0.5]{06.png}
+		\begin{center}
+			\includegraphics[scale=0.5]{03.png}
+			\includegraphics[scale=0.5]{04.png}
+			\includegraphics[scale=0.5]{05.png}
+			\includegraphics[scale=0.5]{06.png}
+		\end{center}
 		
 		\item Cambiando el valor de $k$ por $k = 5 \frac{\textbf{N}}{\textbf{m}}$ no nos encontramos, claramente, con el comportamiento t\'ipico de peque\~as oscilaciones dado que no hay oscilaci\'on. Como $k = 5 \frac{\textbf{N}}{\textbf{m}}$ tenemos que en $\theta = 0$ hay un equilibrio inestable, ya que $\frac{g}{R} > \frac{k}{m}$.
 		
-		
-		\includegraphics[scale=0.5]{07.png}
+		\begin{center}
+			\includegraphics[scale=0.5]{07.png}
+		\end{center}
 		
 		Al analizar los gr\'aficos podemos ver que para $t \in [0,2)$ hay un acuerdo entre ambas soluciones. Luego de $t=2\textbf{s}$ comienza a haber un desfase y con el paso del tiempo el desfase aumenta notablemente. En cuanto a la posicion angular, notemos que cuando $\theta$ es muy peque\~na, los gr\'aficos coinciden. Incluso encontramos acuerdo hasta $\theta \simeq 1 \textbf{rad}$. Luego empieza el desfase y con el tiempo aumenta.
 			
