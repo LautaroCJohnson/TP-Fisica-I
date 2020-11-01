@@ -46,20 +46,20 @@
     $$\ddot{\theta} = \frac{g}{R} \sin{(\theta)} - \frac{k}{m} \sin{(\theta)} \cos{(\theta)}$$
    	Utilizando regla de la cadena,
    	
-   	 $$ \int_{\dot{\theta}_0 = 0 \frac{\textbf{rad}}{\textbf{s}}}^{\dot{\theta}} \! \dot{\theta} \, d\dot{\theta} =
-   	 	\int_{\theta_0}^{\theta} \! \frac{g}{R} \sin{(\theta)} \, d\theta -
-   	 	\int_{\theta_0}^{\theta} \! \frac{k}{m} \sin{(\theta)} \cos{(\theta)} \, d\theta$$
+   	 $$ \int_{\dot{\theta}_0 = 0 \frac{\textbf{rad}}{\textbf{s}}}^{\dot{\theta}} \! \tilde{\dot{\theta}} \, d\tilde{\dot{\theta}} =
+   	 	\int_{\theta_0}^{\theta} \! \frac{g}{R} \sin{(\tilde{\theta})} \, d\tilde{\theta} -
+   	 	\int_{\theta_0}^{\theta} \! \frac{k}{m} \sin{(\tilde{\theta})} \cos{(\tilde{\theta})} \, d\tilde{\theta}$$
    	 	
    	 $$ \frac{\dot{\theta}^2}{2} =
-   	 	-\frac{g}{R} [ \cos{\theta} - \cos{(\frac{\pi}{2})} ] - \frac{k}{2m}(\sin^2{\theta} - 1) $$
+   	 	-\frac{g}{R} \left[ \cos{\theta} - \cos{\left(\frac{\pi}{2}\right)} \right] - \frac{k}{2m}(\sin^2{\theta} - 1) $$
    	 	
    	 $$ \dot{\theta}^2 =
-   	 	-2\frac{g}{R} [ \cos{\theta} - \cos{(\frac{\pi}{2})} ] - \frac{k}{m}(\sin^2{\theta} - 1) $$
+   	 	-2\frac{g}{R} \left[ \cos{\theta} - \cos{\left(\frac{\pi}{2}\right)} \right] - \frac{k}{m}(\sin^2{\theta} - 1) $$
    	 	
    	 Una vez obtenida esta ecuaci\'on, metemos en (\ref{eqn:equationr}) para as\'i poder despejar $F_v(\theta)$. Queda:
    	 
    	 $$
-   	 -mR[-2\frac{g}{R} [ \cos{(\theta)} - \cos{(\frac{\pi}{2})} ] - \frac{k}{m}(\sin^2{(\theta)} - 1)] = F_v - mg \cos{((\theta))} - kR \sin^2{(\theta)}
+   	 -mR\left[-2\frac{g}{R} \left[ \cos{(\theta)} - \cos{\left(\frac{\pi}{2}\right)} \right] - \frac{k}{m}(\sin^2{(\theta)} - 1)\right] = F_v - mg \cos{((\theta))} - kR \sin^2{(\theta)}
    	 $$
    	 
    	 $$
@@ -94,10 +94,10 @@
 		\leftrightarrow mg = kR \cos{(\theta_{\textbf{eq}})} 
    	$$
    	$$
-		\leftrightarrow \arccos{\frac{mg}{kR}} = \arccos{\cos{(\theta_{\textbf{eq}})}} 
+		\leftrightarrow \arccos{\left(\frac{mg}{kR}\right)} = \arccos{(\cos{(\theta_{\textbf{eq}})})} 
    	$$
    	$$
-		\rightarrow \theta_{\textbf{eq}} \in \lbrace \arccos{(\frac{mg}{kR})}, -\arccos{(\frac{mg}{kR})} \rbrace 
+		\rightarrow \theta_{\textbf{eq}} \in \lbrace \arccos{\left(\frac{mg}{kR}\right)}, -\arccos{\left(\frac{mg}{kR}\right)} \rbrace 
    	$$
 
 	Hallamos, los siguientes puntos de equilibrio:
@@ -107,17 +107,17 @@
 	Siendo consistentes con los puntos de equilibrio hallados en el problema 4.9. En cuanto a su estabilidad, buscamos $f'(\theta)$ y la evaluamos en los puntos de equilibrio encontrados. Analizamos su signos.
 	
 	$$
-		f'(\theta) = \cos{(\theta)} (\frac{g}{R} - \frac{k}{m} \cos{\theta}) + \sin{\theta} \sin{\theta} \frac{k}{m}  
+		f'(\theta) = \cos{(\theta)} \left(\frac{g}{R} - \frac{k}{m} \cos{\theta}\right) + \sin{\theta} \sin{\theta} \frac{k}{m}  
 	$$
 	$$
-		\leftrightarrow f'(\theta) = \cos{(\theta)} (\frac{g}{R} - \frac{k}{m} \cos{\theta}) + \sin^2 {\theta} \frac{k}{m}  
+		\leftrightarrow f'(\theta) = \cos{(\theta)} \left(\frac{g}{R} - \frac{k}{m} \cos{\theta}\right) + \sin^2 {\theta} \frac{k}{m}  
 	$$
 	
 	Reemplazando:
 	
 	$$f'(0) < 0 \rightarrow \textsf{Estable}$$
 	$$f'(\pi) < 0 \rightarrow \textsf{Estable}$$
-	$$f'(\pm \arccos{(\frac{gm}{Rk})}) > 0 \rightarrow \textsf{Inestable}$$
+	$$f'\left(\pm \arccos{\left(\frac{gm}{Rk}\right)}\right) > 0 \rightarrow \textsf{Inestable}$$
 	
 	Coincidiendo con lo pedido, determinando $\theta = 0$ como estable, debido a que $\frac{g}{R} < \frac{k}{m}$
 
@@ -137,10 +137,10 @@
 	$$
 	\begin{equation}
 	\label{eqn:taylor}
-		f(\theta) \simeq (\cos{\theta_{\textbf{eq}}}(\frac{g}{R} - \frac{k}{m}\cos(\theta_{\textbf{eq}})) + \sin^2{(\theta)})(\theta - \theta_{\textbf{eq}})
+		f(\theta) \simeq \left(\cos{\theta_{\textbf{eq}}}\left(\frac{g}{R} - \frac{k}{m}\cos(\theta_{\textbf{eq}})\right) + \sin^2{(\theta)}\right)(\theta - \theta_{\textbf{eq}})
 	\end{equation}
 	
-	$$f(0) \simeq (\frac{g}{R} - \frac{k}{m})\theta$$
+	$$f(0) \simeq \left(\frac{g}{R} - \frac{k}{m}\right)\theta$$
 	
 	Para que tenga sentido fisica, $\frac{g}{R} < \frac{k}{m}$ porque sino ser\'ia un equilibrio inestable y no podr\'ia oscilar. Entonces, coincide con la resoluci\'on num\'erica.
 	
